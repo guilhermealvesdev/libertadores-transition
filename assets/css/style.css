@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  background: #303030;
+}
+
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.reveal-block {
+  font-size: 8rem;
+  text-align: left;
+  color: #FFFFFF;
+  display: inline-block;
+  position: relative;
+}
+
+.reveal-block h2 {
+  font-size: inherit;
+  display: inline-block;
+  -webkit-animation: fadeIn 0s 0.6s;
+          animation: fadeIn 0s 0.6s;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  padding-right: 20px;
+}
+
+.reveal-block h2:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #303030;
+  -webkit-animation: mask 1s ease-out forwards;
+          animation: mask 1s ease-out forwards;
+  float: right;
+}
+
+.reveal-block:after {
+  content: "";
+  width: 30px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 20;
+  background-color: #d0a648;
+  -webkit-animation: reveal 1s ease-out backwards;
+          animation: reveal 1s ease-out backwards;
+}
+
+@-webkit-keyframes reveal {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes reveal {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes mask {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes mask {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
